@@ -2,11 +2,14 @@
 
 // the problem of adding up all the whole numbers from 1 through a given number n.
 
-function f(n){
-  return n <= 0 ? false : n%2 === 0 ? (n / 2)*(n + 1) : n%2 === -1 ? Math.ceil(n / 2)*n : false
+const sumOfAllIntsLessThanNum = (num) => {
+  return num <= 0 ? 'enter a positive number'
+    : num%2 === 0 ? (num / 2)*(num + 1)
+    : num%2 === 1 ? Math.ceil(num / 2)*num
+    : false
 };
 
-console.log(f(100) + ' should be equal to 5050')
-console.log(f(9) + ' should be equal to 45')
-console.log(f(10) + ' should be equal to 55')
-console.log(f(11) + ' should be equal to 66')
+console.log(`${sumOfAllIntsLessThanNum(100)} should be equal to 5050`)
+console.log(`${sumOfAllIntsLessThanNum(9)} should be equal to 45`)
+console.log(`${sumOfAllIntsLessThanNum(10)} should be equal to 55`)
+console.log(`${sumOfAllIntsLessThanNum(11)} should be equal to 66`)
