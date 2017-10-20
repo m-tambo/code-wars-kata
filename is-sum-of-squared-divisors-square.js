@@ -11,7 +11,7 @@
 // each subarray having two elements, first the number whose squared divisors is a square
 // and then the sum of the squared divisors.
 
-const findTheDivisors = (number) => {
+const findAllDivisors = (number) => {
   if (number == 1) return [ 1 ]
   let arrayOfDivisors = []
   for (let i = 1; i < Math.ceil(Math.sqrt(number)); i++) {
@@ -21,7 +21,7 @@ const findTheDivisors = (number) => {
 }
 
 const sumOfSquaredDivisors = (number) => {
-  return findTheDivisors(number)
+  return findAllDivisors(number)
     .map(x => x * x)
     .reduce((total, y) => total + y)
 }
@@ -42,11 +42,10 @@ const produceAllPairsInRange = (m, n) => {
   return arrayOfPairs
 }
 
-
-// console.log(findTheDivisors(1), 'should be [ 1 ]')
-// console.log(findTheDivisors(50), 'should be [ 1, 2, 5, 10, 25, 50 ]')
-// console.log(findTheDivisors(42), 'should be [ 1, 2, 3, 6, 7, 14, 21, 42 ]')
-// console.log(findTheDivisors(15), 'should be [ 1, 3, 5, 15 ]')
+// console.log(findAllDivisors(1), 'should be [ 1 ]')
+// console.log(findAllDivisors(50), 'should be [ 1, 2, 5, 10, 25, 50 ]')
+// console.log(findAllDivisors(42), 'should be [ 1, 2, 3, 6, 7, 14, 21, 42 ]')
+// console.log(findAllDivisors(15), 'should be [ 1, 3, 5, 15 ]')
 
 // console.log(sumOfSquaredDivisors(42), 'should be 2500')
 // console.log(sumOfSquaredDivisors(287), 'should be 84100')
