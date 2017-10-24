@@ -22,9 +22,10 @@ def duplicate_count(text):
     return count
 
 
-# print(str(duplicate_count("abcde")) + " should equal 0")
-# print(str(duplicate_count("abcdea")) + " should equal 1")
-# print(str(duplicate_count("indivisibility")) + " should equal 1")
-# print(str(duplicate_count("Indivisibilities")) + " should equal 2")
-# print(str(duplicate_count("aA11")) + " should equal 2")
-# print(str(duplicate_count("ABBA")) + " should equal 2")
+if __name__ == '__main__':
+    print(str(duplicate_count("abcde")) + " should equal 0")
+    print(str(duplicate_count("abcdea")) + " should equal 1")
+    print(str(duplicate_count("indivisibility")) + " should equal 1")
+    print(str(duplicate_count("Indivisibilities")) + " should equal 2")
+    print(str(duplicate_count("aA11")) + " should equal 2")
+    print(str(duplicate_count("ABBA")) + " should equal 2")
