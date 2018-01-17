@@ -2,12 +2,11 @@
 
 // Write a function that returns both the minimum and maximum number of the given list/array
 
-function minMax(arr){
+const minMax = (arr) => {
   const arr2 = arr.slice().sort((a, b) => a - b)
   let arr3 = []
   arr3.push(arr2[0])
   arr3.push(arr2[arr2.length-1])
-  // console.log(arr, arr2, arr3)
   return arr3
 }
 
