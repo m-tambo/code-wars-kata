@@ -20,3 +20,9 @@ const uniqueInOrder = (iterable) => {
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'), "should be ['A', 'B', 'C', 'D', 'A', 'B']")
 // console.log(uniqueInOrder('ABBCcAD'), " should be ['A', 'B', 'C', 'c', 'A', 'D']")
 // console.log(uniqueInOrder([1,2,2,3,3]), " should be [1,2,3]")
+
+
+// ______clever solution using filter.call______
+// const uniqueInOrder = (iterable) => {
+//   return [].filter.call(iterable, (function (a, i) { return iterable[i - 1] !== a }));
+// }
