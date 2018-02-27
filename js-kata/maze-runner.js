@@ -40,7 +40,7 @@ const mazeRunner = (maze, directions) => {
 						: directions[k] == 'W' ? -1
 						:0;
 
-		if (currentArray >= maze.length || currentIndex < 0 || currentIndex >= maze[0].length) {
+		if (currentArray < 0 || currentArray >= maze.length || currentIndex < 0 || currentIndex >= maze[0].length) {
 			return 'Dead'; // IF RUNNER GOES OUTSIDE THE ARRAY, RETURN 'DEAD'
 		} else
 		if (maze[currentArray][currentIndex] == 1) {
